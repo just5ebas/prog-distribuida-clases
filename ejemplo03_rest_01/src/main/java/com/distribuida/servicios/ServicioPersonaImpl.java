@@ -23,4 +23,19 @@ public class ServicioPersonaImpl implements ServicioPersona {
         return em.createQuery("select p from Persona p order by id asc", Persona.class)
                 .getResultList();
     }
+
+    @Override
+    public void create(Persona persona) {
+        em.persist(persona);
+    }
+
+    @Override
+    public void update(Persona persona) {
+        em.merge(persona);
+    }
+
+    @Override
+    public void delete(Integer id) {
+        em.remove(this.findById(id));
+    }
 }

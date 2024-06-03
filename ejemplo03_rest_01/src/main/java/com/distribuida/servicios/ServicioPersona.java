@@ -10,5 +10,9 @@ public interface ServicioPersona {
 
     List<Persona> findAll();
 
+    void create(Persona persona);
 
+    void update(Persona persona);
+
+    void delete(Integer id);
 }
