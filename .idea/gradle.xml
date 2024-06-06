@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/ejemplo01_cdi" />
             <option value="$PROJECT_DIR$/ejemplo02_cdi" />
             <option value="$PROJECT_DIR$/ejemplo03_rest_01" />
+            <option value="$PROJECT_DIR$/ejemplo03_rest_spring" />
           </set>
         </option>
       </GradleProjectSettings>

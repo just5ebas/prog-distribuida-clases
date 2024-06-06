@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="17">
+    <bytecodeTargetLevel target="19">
       <module name="prog-distribuida.ejemplo03_rest" target="21" />
       <module name="prog-distribuida.ejemplo03_rest.main" target="21" />
       <module name="prog-distribuida.ejemplo03_rest.test" target="21" />

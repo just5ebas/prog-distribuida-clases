@@ -15,7 +15,7 @@ public class Principal {
         Instance<StringService> obj = container.select(StringService.class);
         StringService service = obj.get();
 
-//        StringService service = container.select(StringService.class).get();
+//        StringService com.distribuida.service = container.select(StringService.class).get();
 
         String ret = service.convert("Hola Mundo!");
 
