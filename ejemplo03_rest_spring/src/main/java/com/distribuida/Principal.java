@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 import spark.Request;
 import spark.Response;
 
@@ -17,17 +18,18 @@ import java.util.List;
 
 import static spark.Spark.*;
 
-@Component
+@Controller
 public class Principal {
 
-    @Autowired
-    private static IPersonaService personaService;
+    static AnnotationConfigApplicationContext context;
 
-    @Autowired
     private GreetingService greetingService;
 
     static List<Persona> listarPersonas(Request rq, Response res) {
         res.type("application/json");
+
+        var personaService = context.getBean(IPersonaService.class);
+
         return personaService.findAll();
     }
 
@@ -35,6 +37,8 @@ public class Principal {
         res.type("application/json");
 
         String id = rq.params(":id");
+
+        var personaService = context.getBean(IPersonaService.class);
 
         var persona = personaService.findById(Integer.valueOf(id));
 
@@ -50,6 +54,8 @@ public class Principal {
         Gson gson = new Gson();
         Persona persona = gson.fromJson(rq.body(), Persona.class);
 
+        var personaService = context.getBean(IPersonaService.class);
+
         personaService.create(persona);
 
         return persona;
@@ -63,6 +69,8 @@ public class Principal {
         Persona persona = gson.fromJson(rq.body(), Persona.class);
         persona.setId(Integer.valueOf(id));
 
+        var personaService = context.getBean(IPersonaService.class);
+
         personaService.update(persona);
 
         return persona;
@@ -71,6 +79,8 @@ public class Principal {
     static String eliminarPersona(Request rq, Response res) {
         String id = rq.params(":id");
 
+        var personaService = context.getBean(IPersonaService.class);
+
         personaService.delete(Integer.valueOf(id));
 
         return "";
@@ -78,8 +88,12 @@ public class Principal {
 
     public static void main(String[] args) {
 
-        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+        context = new AnnotationConfigApplicationContext(AppConfig.class);
         Principal principal = context.getBean(Principal.class);
+
+        context.getBean(IPersonaService.class).findAll()
+                .stream().map(Persona::getNombre)
+                .forEach(System.out::println);
 
         port(8080);
 
