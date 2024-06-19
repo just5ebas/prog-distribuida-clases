@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="19">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.32/17d46b3e205515e1e8efd3ee4d57ce8018914163/lombok-1.18.32.jar" />
+        </processorPath>
+        <module name="prog-distribuida.ejemplo05_quarkus_author.main" />
+        <module name="prog-distribuida.ejemplo05_quarkus.main" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="17">
       <module name="prog-distribuida.ejemplo03_rest" target="21" />
       <module name="prog-distribuida.ejemplo03_rest.main" target="21" />
       <module name="prog-distribuida.ejemplo03_rest.test" target="21" />

@@ -13,6 +13,8 @@
             <option value="$PROJECT_DIR$/ejemplo02_cdi" />
             <option value="$PROJECT_DIR$/ejemplo03_rest_01" />
             <option value="$PROJECT_DIR$/ejemplo03_rest_spring" />
+            <option value="$PROJECT_DIR$/ejemplo05_quarkus" />
+            <option value="$PROJECT_DIR$/ejemplo05_quarkus_author" />
           </set>
         </option>
       </GradleProjectSettings>
