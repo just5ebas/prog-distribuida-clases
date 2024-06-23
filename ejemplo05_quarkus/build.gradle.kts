@@ -25,6 +25,10 @@ dependencies {
     implementation("io.quarkus:quarkus-resteasy-reactive-jackson") //JSON
     implementation("io.quarkus:quarkus-hibernate-orm-panache") //JPA Hibernate+ repo
 
+    //REST CLIENT
+    implementation("io.quarkus:quarkus-rest-client-reactive")
+    implementation("io.quarkus:quarkus-rest-client-reactive-jackson")
+
     implementation("org.postgresql:postgresql:42.7.3")
     implementation("io.quarkus:quarkus-jdbc-postgresql:3.11.2")
 

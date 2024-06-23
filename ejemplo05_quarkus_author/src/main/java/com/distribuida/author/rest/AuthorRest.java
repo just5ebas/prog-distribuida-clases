@@ -16,7 +16,7 @@ import java.util.List;
 @Consumes(MediaType.APPLICATION_JSON)
 @ApplicationScoped
 @Transactional
-public class BookRest {
+public class AuthorRest {
 
     @Inject
     AuthorRepository authorRepository;
@@ -48,9 +48,9 @@ public class BookRest {
     public Response update(@PathParam("id") Integer id, Author author) {
         Author obj = authorRepository.findById(id);
 
-        obj.setName(author.getName());
+        obj.setFirstName(author.getFirstName());
         obj.setLastName(author.getLastName());
-        obj.setAge(author.getAge());
+//        obj.setAge(author.getAge());
 
         return Response.ok().build();
     }
