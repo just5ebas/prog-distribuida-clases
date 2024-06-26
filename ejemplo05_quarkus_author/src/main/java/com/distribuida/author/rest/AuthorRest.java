@@ -23,12 +23,14 @@ public class AuthorRest {
 
     @GET
     public List<Author> findAll() {
+        System.out.println("findAll");
         return authorRepository.listAll();
     }
 
     @GET
     @Path("/{id}")
     public Response findById(@PathParam("id") Integer id) {
+        System.out.println("findById");
         var op = authorRepository.findByIdOptional(id);
         if (op.isEmpty()) {
             return Response.status(Response.Status.NOT_FOUND).build();

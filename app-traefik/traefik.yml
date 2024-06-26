@@ -1,0 +1,12 @@
+api:
+  insecure: true
+  dashboard: true
+
+entrypoints:
+  http:
+    address: ":7070"
+
+providers:
+  file:
+    filename: apps.yml
+    watch: true

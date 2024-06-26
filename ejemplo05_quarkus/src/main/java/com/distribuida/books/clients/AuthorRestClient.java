@@ -8,7 +8,8 @@ import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 @Path("/authors")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-@RegisterRestClient(baseUri = "http://localhost:9090")
+//@RegisterRestClient(baseUri = "http://localhost:9090")
+@RegisterRestClient(configKey = "AuthorRestClient")
 public interface AuthorRestClient {
 
     @GET

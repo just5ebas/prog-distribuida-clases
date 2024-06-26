@@ -1,0 +1,59 @@
+GET http://localhost:7070/books
+Accept: application/json
+Content-Type: application/json
+host: books.distribuida.com
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+content-length: 0
+
+###
+
+GET http://localhost:7070/authors
+Accept: application/json
+Content-Type: application/json
+host: authors.distribuida.com
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+content-length: 0
+
+###
+
+GET http://localhost:7070/books
+Accept: application/json
+Content-Type: application/json
+host: books.distribuida.com
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+content-length: 0
+
+###
+
+GET http://localhost:7070/authors
+Accept: application/json
+Content-Type: application/json
+host: authors.distribuida.com
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+content-length: 0
+
+###
+
+GET http://localhost:7070/authors
+Accept: application/json
+Content-Type: application/json
+host: authors.distribuida.com
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+content-length: 0
+
+###
+
+GET http://localhost:7070/authors
+Accept: application/json
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+content-length: 0
+
+###
+

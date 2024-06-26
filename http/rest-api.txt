@@ -1,0 +1,59 @@
+GET http://localhost:7070/authors
+Accept: application/json
+Content-Type: application/json
+host: authors.distribuida.com
+
+###
+GET http://localhost:7070/books
+Accept: application/json
+Content-Type: application/json
+host: books.distribuida.com
+
+###
+POST http://localhost:7070/books
+Accept: application/json
+Content-Type: application/json
+host: books.distribuida.com
+
+{
+  "id": 1,
+  "isbn": "1111-11",
+  "title": "title 1",
+  "price": 10,
+  "authorId": 1
+}
+
+###
+POST http://localhost:7070/authors
+Accept: application/json
+Content-Type: application/json
+host: authors.distribuida.com
+
+{
+  "id": 1,
+  "firstName": "Ariel",
+  "lastName": "Maldonado"
+}
+
+###
+PUT http://localhost:8080/books/1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "isbn": "1221-11",
+  "title": "title 11",
+  "price": 10.25,
+  "authorId": 1
+}
+
+###
+PUT http://localhost:7070/authors/1
+Accept: application/json
+Content-Type: application/json
+host: authors.distribuida.com
+
+{
+  "firstName": "Sebastian",
+  "lastName": "Maldonado"
+}
