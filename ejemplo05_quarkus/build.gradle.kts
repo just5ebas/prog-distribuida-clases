@@ -34,4 +34,7 @@ dependencies {
 
     implementation("org.projectlombok:lombok:1.18.32")
     annotationProcessor("org.projectlombok:lombok:1.18.32")
+
+    // LoadBalancer
+    implementation("io.smallrye.stork:stork-service-discovery-static-list:2.6.0")
 }

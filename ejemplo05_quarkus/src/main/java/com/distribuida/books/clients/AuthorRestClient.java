@@ -9,7 +9,8 @@ import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 //@RegisterRestClient(baseUri = "http://localhost:9090")
-@RegisterRestClient(configKey = "AuthorRestClient")
+//@RegisterRestClient(configKey = "AuthorRestClient")
+@RegisterRestClient(baseUri = "stork://my-service")
 public interface AuthorRestClient {
 
     @GET
