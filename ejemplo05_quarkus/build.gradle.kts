@@ -36,5 +36,12 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok:1.18.32")
 
     // LoadBalancer
-    implementation("io.smallrye.stork:stork-service-discovery-static-list:2.6.0")
+//    implementation("io.smallrye.stork:stork-service-discovery-static-list:2.6.0")
+
+    // Para reconocer al servidor Consul
+    implementation("io.smallrye.stork:stork-service-discovery-consul:2.6.0")
+
+    // Registros: libreria para interactuar con el servidor de registros
+    // Con esta libreria cada que se levante una aplicacion de este API, Consul la reconocera
+    implementation("io.smallrye.reactive:smallrye-mutiny-vertx-consul-client")
 }

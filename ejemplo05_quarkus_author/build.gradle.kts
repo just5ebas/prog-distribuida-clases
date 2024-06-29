@@ -30,4 +30,6 @@ dependencies {
 
     implementation("org.projectlombok:lombok:1.18.32")
     annotationProcessor("org.projectlombok:lombok:1.18.32")
+
+    implementation("io.smallrye.reactive:smallrye-mutiny-vertx-consul-client")
 }

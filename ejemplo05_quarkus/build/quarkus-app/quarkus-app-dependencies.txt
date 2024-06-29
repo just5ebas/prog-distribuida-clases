@@ -93,6 +93,7 @@ io.smallrye.reactive:mutiny-zero-flow-adapters::jar:1.1.0
 io.smallrye.reactive:mutiny::jar:2.6.0
 io.smallrye.reactive:smallrye-mutiny-vertx-auth-common::jar:3.12.0
 io.smallrye.reactive:smallrye-mutiny-vertx-bridge-common::jar:3.12.0
+io.smallrye.reactive:smallrye-mutiny-vertx-consul-client::jar:3.12.0
 io.smallrye.reactive:smallrye-mutiny-vertx-core::jar:3.12.0
 io.smallrye.reactive:smallrye-mutiny-vertx-runtime::jar:3.12.0
 io.smallrye.reactive:smallrye-mutiny-vertx-uri-template::jar:3.12.0
@@ -102,7 +103,9 @@ io.smallrye.reactive:smallrye-reactive-converter-api::jar:3.0.1
 io.smallrye.reactive:smallrye-reactive-converter-mutiny::jar:3.0.1
 io.smallrye.reactive:vertx-mutiny-generator::jar:3.12.0
 io.smallrye.stork:stork-api::jar:2.6.0
+io.smallrye.stork:stork-configuration-generator::jar:2.6.0
 io.smallrye.stork:stork-core::jar:2.6.0
+io.smallrye.stork:stork-service-discovery-consul::jar:2.6.0
 io.smallrye:jandex::jar:3.1.8
 io.smallrye:smallrye-context-propagation-api::jar:2.1.0
 io.smallrye:smallrye-context-propagation-jta::jar:2.1.0
@@ -112,6 +115,7 @@ io.smallrye:smallrye-fault-tolerance-vertx::jar:6.3.0
 io.vertx:vertx-auth-common::jar:4.5.7
 io.vertx:vertx-bridge-common::jar:4.5.7
 io.vertx:vertx-codegen::jar:4.5.7
+io.vertx:vertx-consul-client::jar:4.5.7
 io.vertx:vertx-core::jar:4.5.7
 io.vertx:vertx-uri-template::jar:4.5.7
 io.vertx:vertx-web-client::jar:4.5.7
