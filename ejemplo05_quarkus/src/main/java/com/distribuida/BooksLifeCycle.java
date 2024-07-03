@@ -13,6 +13,7 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.util.List;
 import java.util.UUID;
 
 @ApplicationScoped
@@ -30,7 +31,7 @@ public class BooksLifeCycle {
     private String serviceId;
 
     public void init(@Observes StartupEvent evt, Vertx vertx) throws UnknownHostException {
-        System.out.println("*************** AuthorsLifeCycle init ***************");
+        System.out.println("*************** BooksLifeCycle init ***************");
 
         ConsulClient client = ConsulClient.create(vertx,
                 new ConsulClientOptions()
@@ -51,6 +52,14 @@ public class BooksLifeCycle {
                         .setId(serviceId)
                         .setAddress(ipAddress.getHostAddress())
                         .setPort(port)
+                        .setTags(
+                                List.of(
+                                        "traefik.enable=true",
+                                        "traefik.http.routers.app-books.rule=PathPrefix(`/app-books`)",
+                                        "traefik.http.routers.app-books.middlewares=app-books",
+                                        "traefik.http.middlewares.app-books.stripPrefix.prefixes=/app-books"
+                                )
+                        )
                         .setCheckOptions(
                                 new CheckOptions()
                                         .setHttp(httpCheckUrl)
@@ -62,7 +71,7 @@ public class BooksLifeCycle {
     }
 
     public void stop(@Observes ShutdownEvent evt, Vertx vertx) {
-        System.out.println("*************** AuthorsLifeCycle stop ***************");
+        System.out.println("*************** BooksLifeCycle stop ***************");
 
         ConsulClient client = ConsulClient.create(vertx,
                 new ConsulClientOptions()

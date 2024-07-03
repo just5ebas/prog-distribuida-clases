@@ -6,12 +6,16 @@ http:
       service: service-app-authors
       #rule: Host(`authors.distribuida.com`)
       rule: PathPrefix(`/app-authors`)
+      middlewares:
+        - mid-authors
     router-app-books:
       entryPoints:
         - http
       service: service-app-books
       #rule: Host(`authors.distribuida.com`)
       rule: PathPrefix(`/app-books`)
+      middlewares:
+        - mid-books
   services:
     service-app-authors:
       loadBalancer:
