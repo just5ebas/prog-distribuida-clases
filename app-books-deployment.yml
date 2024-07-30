@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-books
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app-books
+  template:
+    metadata:
+      labels:
+        app: app-books
+    spec:
+      containers:
+        - name: app-books
+          image: just5ebas/ejemplp05_quarkus
+          ports:
+            - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              port: 8080
+              path: /q/health/live
+            initialDelaySeconds: 20
+            periodSeconds: 5
+          env:
+            - name: QUARKUS_DATASOURCE_USERNAME
+              value: distibuida_user
+            - name: QUARKUS_DATASOURCE_PASSWORD
+              value: jJ4oJSuEbOWXJVyGVSdfmG5v0Pzn3YPX
+            - name: QUARKUS_DATASOURCE_JDBC_URL
+              value: jdbc:postgresql://dpg-cqc4g3d6l47c73ctsa3g-a.oregon-postgres.render.com/distibuida
+            - name: QUARKUS_HTTP_PORT
+              value: "8080"
+            - name: APP_AUTHOR_URL
+              value: http://app-author-service:8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-books-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: app-books
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080

@@ -44,4 +44,7 @@ dependencies {
     // Registros: libreria para interactuar con el servidor de registros
     // Con esta libreria cada que se levante una aplicacion de este API, Consul la reconocera
     implementation("io.smallrye.reactive:smallrye-mutiny-vertx-consul-client")
+
+    //HEALTH
+    implementation("io.quarkus:quarkus-smallrye-health")
 }

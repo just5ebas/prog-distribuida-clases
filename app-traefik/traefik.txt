@@ -26,3 +26,13 @@ Ejecutar:
 
 Consola de Administracion:
     localhost:8500
+
+-----------------------------------------
+MINIKUBE:
+    minikube start
+    minikube stop
+    minikube delete -all
+
+Desplegar:
+    kubectl apply -f app-authors-deployment.yml
+    kubectl apply -f app-books-deployment.yml
