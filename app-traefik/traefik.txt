@@ -27,7 +27,7 @@ Ejecutar:
 Consola de Administracion:
     localhost:8500
 
------------------------------------------
+------------------------------------------
 MINIKUBE:
     minikube start
     minikube stop
@@ -36,3 +36,39 @@ MINIKUBE:
 Desplegar:
     kubectl apply -f app-authors-deployment.yml
     kubectl apply -f app-books-deployment.yml
+
+------------------------------------------
+DOCKER:
+    Build: Esto se debe hacer en la ruta en la que se encuentre un docker file.
+    docker build -t nombre-app .
+
+    Build books
+    docker build -t just5ebas/app-books-clases .
+
+    Build authors
+    docker build -t just5ebas/app-authors-clases .
+
+    ###########################
+
+    Tag: esto es para poder subir a docker hub las imagenes
+    // se ejecuta este comando cuando se construyo la imagen sin el tag del usuario
+    docker tag nombre-app nombre-usuario/nombre-app
+
+    Tag books
+    docker tag app-books-clases just5ebas/app-books-clases
+
+    Tag authors
+    docker tag app-authors-clases just5ebas/app-authors-clases
+
+    ###########################
+
+    Subir a docker hub:
+    docker login
+
+    docker push usuario/nombre-app
+
+    Subir books
+    docker push just5ebas/app-books-clases
+
+    Subir authors
+    docker push just5ebas/app-authors-clases

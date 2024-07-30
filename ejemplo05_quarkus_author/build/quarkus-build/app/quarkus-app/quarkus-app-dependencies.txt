@@ -63,6 +63,7 @@ io.quarkus:quarkus-rest-jackson::jar:3.11.1
 io.quarkus:quarkus-rest::jar:3.11.1
 io.quarkus:quarkus-security-runtime-spi::jar:3.11.1
 io.quarkus:quarkus-smallrye-context-propagation::jar:3.11.1
+io.quarkus:quarkus-smallrye-health::jar:3.11.1
 io.quarkus:quarkus-transaction-annotations::jar:3.11.1
 io.quarkus:quarkus-vertx-http::jar:3.11.1
 io.quarkus:quarkus-vertx-latebound-mdc-provider::jar:3.11.1
@@ -101,6 +102,9 @@ io.smallrye:smallrye-context-propagation-jta::jar:2.1.0
 io.smallrye:smallrye-context-propagation-storage::jar:2.1.0
 io.smallrye:smallrye-context-propagation::jar:2.1.0
 io.smallrye:smallrye-fault-tolerance-vertx::jar:6.3.0
+io.smallrye:smallrye-health-api::jar:4.1.0
+io.smallrye:smallrye-health-provided-checks::jar:4.1.0
+io.smallrye:smallrye-health::jar:4.1.0
 io.vertx:vertx-auth-common::jar:4.5.7
 io.vertx:vertx-bridge-common::jar:4.5.7
 io.vertx:vertx-codegen::jar:4.5.7
@@ -128,6 +132,7 @@ org.antlr:antlr4-runtime::jar:4.13.0
 org.eclipse.angus:angus-activation::jar:2.0.2
 org.eclipse.microprofile.config:microprofile-config-api::jar:3.1
 org.eclipse.microprofile.context-propagation:microprofile-context-propagation-api::jar:1.3
+org.eclipse.microprofile.health:microprofile-health-api::jar:4.0.1
 org.eclipse.microprofile.reactive-streams-operators:microprofile-reactive-streams-operators-api::jar:3.0
 org.eclipse.parsson:parsson::jar:1.1.6
 org.glassfish.jaxb:jaxb-core::jar:4.0.5

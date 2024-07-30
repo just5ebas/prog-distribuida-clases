@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: app-author
-          image: just5ebas/ejemplo05_author
+          image: just5ebas/app-authors-clases
           ports:
             - containerPort: 8080
           livenessProbe:

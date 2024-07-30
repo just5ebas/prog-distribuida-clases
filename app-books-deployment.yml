@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: app-books
-          image: just5ebas/ejemplp05_quarkus
+          image: just5ebas/app-books-clases
           ports:
             - containerPort: 8080
           livenessProbe:

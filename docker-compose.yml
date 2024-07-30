@@ -40,7 +40,7 @@ services:
     depends_on:
       - consul
   authors-service:
-    image: ejemplo05_quarkus_author
+    image: just5ebas/app-authors-clases
     environment:
       QUARKUS_DATASOURCE_USERNAME: postgres
       QUARKUS_DATASOURCE_PASSWORD: postgres
@@ -54,7 +54,7 @@ services:
     deploy:
       replicas: 2
   books-service:
-    image: ejemplo05_quarkus
+    image: just5ebas/app-books-clases
     environment:
       QUARKUS_DATASOURCE_USERNAME: postgres
       QUARKUS_DATASOURCE_PASSWORD: postgres
